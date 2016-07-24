@@ -1,0 +1,98 @@
+<html>
+
+<head>
+<title>我的第一个 HTML 页面</title>
+<style>
+	.nav{
+	width:100%;
+    height:100%; 
+	position: absolute;
+	left:0;
+	top:0;
+	font-family: "Josefin Slab","Myriad Pro",Arial,sans-serif;
+}
+
+.nav input,
+.nav a{ 
+	width:20%;
+	height:40px;
+	line-height:40px;
+    position:fixed;
+	bottom:0;
+	left:0;
+
+/* 	z-index:10  */
+}
+.nav input{
+	z-index:1000;
+	opacity:0;
+}
+.nav a{
+	z-index: 10;
+	background: #e23a6e;
+	height:40px;
+	line-height:40px;
+	text-decoration: none;
+	font-weight:700;
+	text-align: center;
+	color:#fff;
+	font-size:18px;
+	text-shadow:1px 1px 1px rgba(151,24,64,0.2);
+}
+#st-control-1,#st-control-1+a{
+	left:0%;
+}
+#st-control-2,#st-control-2+a{
+	left:20%;
+}
+#st-control-3,#st-control-3+a{
+	left:40%;
+}
+#st-control-4,#st-control-4+a{
+	left:60%;
+}
+#st-control-5,#st-control-5+a{
+	left:80%;
+}
+.nav input:checked+a,
+.nav input:checked:hover+a{
+	background:#821134 ;
+}
+/* 三角制作 */
+.nav input:checked+a:after
+{
+	content:"";
+	width:0;
+	height:0;
+	overflow: hidden;
+	border:20px solid transparent;
+	border-bottom-color: #821134;
+	position:absolute;
+	bottom:100%;
+	left:50%;
+	margin-left:-20px;
+}
+.nav input:hover+a{
+	background: #AD244f;
+}
+</style>
+</head>
+
+<body>
+ <div class="nav">
+   <!-- 导航开始 -->
+	 <input type="radio" id="st-control-1" checked="ckecked"name="button">
+	 <a href="#st-panel-1">Frist</a>
+	 <input type="radio" id="st-control-2" name=button>
+	 <a href="#st-panel-2">Two</a>
+	 <input type="radio" id="st-control-3"name=button>
+	 <a href="#st-panel-3">Three</a>
+	 <input type="radio" id="st-control-4"name=button>
+	 <a href="#st-panel-4">Four</a>
+	 <input type="radio" id="st-control-5"name=button>
+	 <a href="#st-panel-5">Five</a>
+	</div>
+</body>
+
+</html>
+
